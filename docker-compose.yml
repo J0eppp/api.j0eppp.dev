@@ -32,10 +32,10 @@ services:
       - db
     volumes:
       - ./:/app
-#    ports:
-#      - "5000:5000"
+    ports:
+      - "${API_PORT}:${API_PORT}"
     expose:
-      - "5000"
+      - "${API_PORT}"
     networks:
       - api-j0eppp-dev-network
     env_file:
